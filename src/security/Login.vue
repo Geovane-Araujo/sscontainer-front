@@ -8,6 +8,9 @@
       </div>
       <div class="login-direito">
         <div class="fo p-fluid">
+          <div class="login-mobile" style="margin-bottom: 50px">
+            <p class="login-texto" >Nicolas<span style="color: #a80ec7">Cagezinho</span></p>
+          </div>
           <div>
             <span class="p-float-label">
               <InputText id="email" type="text" v-model="form.email" />
@@ -36,6 +39,9 @@
 </script>
 
 <style lang="scss" scoped>
+.login-mobile{
+  display: none;
+}
 .fo{
   width: 90%;
 }
@@ -68,16 +74,34 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 600px) {
-  .esquerda{
-    height: 100%;
-    width: 100%
+@media screen and (max-width: 900px) {
+  .login-esquerdo{
+    width: 50%;
   }
-  .direita{
+  .login-texto{
+    font-size: 30px;
+  }
+  .login-direito{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-mobile{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .login-esquerdo{
+    width: 0%;
+  }
+  .login-esquerdo-mascara{
     display: none;
   }
-  .texto{
-  font-size: 50px;
+  .login-texto{
+    font-size: 35px;
+  }
+  .login-direito{
+    width: 100%;
   }
 }
 </style>
