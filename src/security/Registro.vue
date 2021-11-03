@@ -12,6 +12,15 @@
             <p class="login-texto" >Nicolas<span style="color: #a80ec7">Cagezinho</span></p>
           </div>
           <div>
+            Registre-se
+          </div>
+          <div>
+            <span class="p-float-label">
+              <InputText id="nome" type="text" v-model="form.nome" />
+              <label for="nome">Nome</label>
+            </span>
+          </div>
+          <div style="margin-top: 40px">
             <span class="p-float-label">
               <InputText id="email" type="email" v-model="form.email" />
               <label for="email">Email</label>
@@ -23,11 +32,11 @@
               <label for="senha">Senha</label>
             </span>
           </div>
-          <div v-show="login" style="margin-top: 40px">
-            <Button label="Login" @click="login(form)" class="p-button-rounded" />
+          <div style="margin-top: 40px">
+            <Button label="Registrar" @click="registrar(form)" class="p-button-rounded" />
           </div>
           <div style="margin-top: 20px">
-            <Button @click="registro()" label="Registre-se" class="p-button-rounded p-button-secondary" />
+            <Button @click="retornar" label="Retornar" class="p-button-rounded p-button-secondary" />
           </div>
         </div>
       </div>
@@ -35,7 +44,7 @@
   </div>
 </template>
 
-<script src="./Login.js">
+<script src="./Registro.js">
 </script>
 
 <style lang="scss" scoped>

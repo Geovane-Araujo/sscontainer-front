@@ -6,12 +6,25 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: { name: 'DashBoard', params: { name: 'DashBoard' } },
+    children: [
+      {
+        path: '/dashboard',
+        name: 'DashBoard',
+        component: () => import('../views/pages/DashBoard.vue')
+      },
+    ]
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../security/Login.vue')
+    component: () => import('../security/Login.vue')
+  },
+  {
+    path: '/registro',
+    name: 'Registro',
+    component: () => import('../security/Registro.vue')
   }
 ]
 

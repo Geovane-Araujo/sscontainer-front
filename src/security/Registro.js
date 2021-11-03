@@ -6,7 +6,10 @@ import axios from 'axios'
 export default {
   data () {
     return {
+      registro: false,
+      login: true,
       form: {
+        nome: '',
         email: '',
         senha: ''
       }
@@ -16,19 +19,16 @@ export default {
     return {}
   },
   methods: {
-    login (form) {
-      axios.post('https://localhost:44311/api/AuthManager/Login', form).then(res => {
+    registrar (form) {
+      axios.post('https://localhost:44311/api/AuthManager/Register', form).then(res => {
         console.log(res.data)
-        sessionStorage.setItem('token', res.data.token)
-        this.$router.push('dashboard')
+        this.$router.push('login')
       }).catch(err => {
-        sessionStorage.setItem('token', '')
         this.$toast.add({ severity: 'error', summary: 'SSCOntainer', detail: err.response.data.errors[0], life: 3000 })
       })
     },
-    registro () {
-      alert('t')
-      this.$router.push('registro')
+    retornar () {
+      this.$router.push('login')
     }
   },
   components: {

@@ -1,7 +1,15 @@
 <template>
   <router-view/>
+  <Toast position="bottom-left"/>
 </template>
-
+<script>
+import Toast from 'primevue/toast'
+export default {
+  components: {
+    Toast
+  }
+}
+</script>
 <style lang="scss">
 *{
   margin: 0px;
