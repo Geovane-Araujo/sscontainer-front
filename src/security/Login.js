@@ -27,7 +27,6 @@ export default {
       })
     },
     registro () {
-      alert('t')
       this.$router.push('registro')
     }
   },

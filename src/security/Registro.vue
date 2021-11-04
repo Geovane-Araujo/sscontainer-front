@@ -11,8 +11,8 @@
           <div class="login-mobile" style="margin-bottom: 50px">
             <p class="login-texto" >Nicolas<span style="color: #a80ec7">Cagezinho</span></p>
           </div>
-          <div>
-            Registre-se
+          <div class="registro-template" style="margin-bottom: 50px">
+            <p class="ss">Registre-se</p>
           </div>
           <div>
             <span class="p-float-label">
@@ -48,6 +48,15 @@
 </script>
 
 <style lang="scss" scoped>
+.ss{
+  font-size: 30px;
+  color: azure;
+}
+.registro-template{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .login-mobile{
   display: none;
 }
