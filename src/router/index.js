@@ -12,7 +12,12 @@ const routes = [
       {
         path: '/dashboard',
         name: 'DashBoard',
-        component: () => import('../views/pages/DashBoard.vue')
+        component: () => import('../views/pages/DashBoard/DashBoard.vue')
+      },
+      {
+        path: '/empresa',
+        name: 'Empresa',
+        component: () => import('../views/pages/Empresa/Empresa.vue')
       },
     ]
   },

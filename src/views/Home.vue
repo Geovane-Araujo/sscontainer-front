@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    Aqui pe a Home
+    <ss-side-bar/>
   </div>
 </template>
 

@@ -3,13 +3,13 @@
     <div class="login">
       <div class="login-esquerdo">
         <div class="login-esquerdo-mascara">
-          <p class="login-texto" >Nicolas<span style="color: #a80ec7">Cagezinho</span></p>
+          <p class="login-texto" >SS<span style="color: #a80ec7">Container</span></p>
         </div>
       </div>
       <div class="login-direito">
         <div class="fo p-fluid">
           <div class="login-mobile" style="margin-bottom: 50px">
-            <p class="login-texto" >Nicolas<span style="color: #a80ec7">Cagezinho</span></p>
+            <p class="login-texto" >SS<span style="color: #a80ec7">Container</span></p>
           </div>
           <div>
             <span class="p-float-label">

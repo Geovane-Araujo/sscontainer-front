@@ -24,7 +24,7 @@ export default {
         console.log(res.data)
         this.$router.push('login')
       }).catch(err => {
-        this.$toast.add({ severity: 'error', summary: 'SSCOntainer', detail: err.response.data.errors[0], life: 3000 })
+        this.$toast.add({ severity: 'error', summary: 'SSCOntainer', detail: err.response.data, life: 3000 })
       })
     },
     retornar () {
