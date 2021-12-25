@@ -17,9 +17,11 @@ export default {
   },
   methods: {
     login (form) {
+      form.email = this.onTratativaone(form.email);
+      form.senha = this.onTratativaone(form.senha);
+
       axios.post('https://localhost:44311/api/AuthManager/Login', form).then(res => {
-        console.log(res.data)
-        sessionStorage.setItem('token', res.data.token)
+        sessionStorage.setItem('token', btoa(res.data.token))
         this.$router.push('dashboard')
       }).catch(err => {
         sessionStorage.setItem('token', '')
@@ -28,6 +30,14 @@ export default {
     },
     registro () {
       this.$router.push('registro')
+    },
+    onTratativaone(texto) {
+      return texto.replace(/\0/g, '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&#34;')
+          .replace(/'/g, '&#39;');
     }
   },
   components: {

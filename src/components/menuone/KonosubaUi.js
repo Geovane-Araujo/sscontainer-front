@@ -29,7 +29,7 @@ export default {
           },
           {
             route: '',
-            name: 'Thunais',
+            name: 'Clientes',
             toltip: '',
             icon: 'ks ks-dashboard'
           }

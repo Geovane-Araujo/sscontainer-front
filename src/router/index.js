@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import before from './beforeEach'
 
+sessionStorage.setItem('token','')
+
 const routes = [
   {
     path: '/',
@@ -17,7 +19,12 @@ const routes = [
       {
         path: '/empresa',
         name: 'Empresa',
-        component: () => import('../views/pages/Empresa/Empresa.vue')
+        component: () => import('../views/pages/Empresa/list/Empresa.vue')
+      },
+      {
+        path: '/formempresa',
+        name: 'FormEmpresa',
+        component: () => import('../views/pages/Empresa/form/Empresa.vue')
       },
     ]
   },

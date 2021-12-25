@@ -10,7 +10,10 @@ import './assets/themes/luna-pink/theme.css'
 import 'primevue/resources/primevue.min.css'
 import 'primeicons/primeicons.css'
 import './assets/icons/icons.scss'
+import './assets/app.scss'
+import './global'
 import personalSidebar from './components/menuone/KonosubaUi.vue'
+import 'primeflex/primeflex.css'
 
 const app = createApp(App)
 app.use(PrimeVue, { ripple: true })
